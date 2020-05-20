@@ -1,89 +1,91 @@
 
-Showing logs for build [32mvivekthangathurai-go-jenkins-x-tj5xv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-wr7fs[0m
-{"level":"warn","ts":1585829022.4053733,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1585829022.406022,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32mvivekthangathurai-go-jenkins-x-r6ll7-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-7dnrd[0m
+{"level":"info","ts":1589963550.7016811,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1589963550.7026885,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32mvivekthangathurai-go-jenkins-x-tj5xv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-vch69[0m
-{"level":"warn","ts":1585829023.260427,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1585829023.2628572,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32mvivekthangathurai-go-jenkins-x-r6ll7-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-sp726[0m
+{"level":"info","ts":1589963552.1529155,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1589963552.1570501,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32mvivekthangathurai-go-jenkins-x-tj5xv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+Showing logs for build [32mvivekthangathurai-go-jenkins-x-r6ll7-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32mvivekthangathurai-go-jenkins-x-tj5xv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-vivekthangathurai-go-jenkins-x-tj5xv-g2qbc[0m
-{"level":"warn","ts":1585829048.3979902,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1585829048.9265327,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*****************/go-jenkins-x.git @ v0.0.1 in path /workspace/source"}
+Showing logs for build [32mvivekthangathurai-go-jenkins-x-r6ll7-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-vivekthangathurai-go-jenkins-x-r6ll7-lk5gx[0m
+{"level":"info","ts":1589963559.2871776,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1589963559.738179,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*****************/go-jenkins-x.git @ v0.0.2 in path /workspace/source"}
 
-Showing logs for build [32mvivekthangathurai-go-jenkins-x-tj5xv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:cc860cf1f1389adc16a981501cb08536096c0fda
+Showing logs for build [32mvivekthangathurai-go-jenkins-x-r6ll7-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32mvivekthangathurai-go-jenkins-x-tj5xv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Showing logs for build [32mvivekthangathurai-go-jenkins-x-r6ll7-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
 Generated Git credentials file /workspace/xdg_config/git/credentials
 
-Showing logs for build [32mvivekthangathurai-go-jenkins-x-tj5xv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+Showing logs for build [32mvivekthangathurai-go-jenkins-x-r6ll7-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
 CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/go-jenkins-x main.go
 
-Showing logs for build [32mvivekthangathurai-go-jenkins-x-tj5xv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
-[36mINFO[0m[0000] No base image, nothing to extract            
-[36mINFO[0m[0000] cmd: EXPOSE                                  
-[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
-[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
-[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
-[36mINFO[0m[0000] Taking snapshot of full filesystem...        
-[36mINFO[0m[0000] EXPOSE 8080                                  
-[36mINFO[0m[0000] cmd: EXPOSE                                  
-[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
-[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0000] ENTRYPOINT ["/go-jenkins-x"]                 
-[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
-[36mINFO[0m[0000] COPY ./bin/ /                                
-[36mINFO[0m[0000] Taking snapshot of files...                  
-ERROR: logging before flag.Parse: E0402 12:04:22.637938      11 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
-ERROR: logging before flag.Parse: E0402 12:04:22.646899      11 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
-2020/04/02 12:04:24 pushed blob: sha256:0f9299b60f0f325f75b37ac7d175ce04a495c6f85f0c5a2157b51dc783945799
-2020/04/02 12:04:24 pushed blob: sha256:83b80bc7a53abf05b8158f832578302048173e33d596da8b93d22caf3bdfd351
-2020/04/02 12:04:25 index.docker.io/futureci/go-jenkins-x:0.0.1: digest: sha256:3f2e157d20865fe56b723d711f9fb8c2829e4e499cff855e9d2c35e78484df72 size: 428
+Showing logs for build [32mvivekthangathurai-go-jenkins-x-r6ll7-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0520 08:33:05.287740      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] No base image, nothing to extract            
+[36mINFO[0m[0001] Built cross stage deps: map[]                
+[36mINFO[0m[0001] No base image, nothing to extract            
+[36mINFO[0m[0001] Executing 0 build triggers                   
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] Checking for cached layer gcr.io/jenkinsx-277315/cache:c54d00d9054f81fdc69278304a65e5b09f541f307935d028b78fbd300027b4cd... 
+[36mINFO[0m[0001] No cached layer found for cmd COPY ./bin/ /  
+[36mINFO[0m[0001] Unpacking rootfs as cmd COPY ./bin/ / requires it. 
+[36mINFO[0m[0001] EXPOSE 8080                                  
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] ENTRYPOINT ["/go-jenkins-x"]                 
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] COPY ./bin/ /                                
+[36mINFO[0m[0001] Resolving 2 paths                            
+[36mINFO[0m[0001] Taking snapshot of files...                  
+[36mINFO[0m[0001] Pushing layer gcr.io/jenkinsx-277315/cache:c54d00d9054f81fdc69278304a65e5b09f541f307935d028b78fbd300027b4cd to cache now 
 
-Showing logs for build [32mvivekthangathurai-go-jenkins-x-tj5xv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+Showing logs for build [32mvivekthangathurai-go-jenkins-x-r6ll7-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
 no CVE provider running in the current ** namespace so skip adding image to be analysed
 
-Showing logs for build [32mvivekthangathurai-go-jenkins-x-tj5xv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Showing logs for build [32mvivekthangathurai-go-jenkins-x-r6ll7-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
 Converted /workspace/source/charts/go-jenkins-x to an unshallow repository
-Generating change log from git ref 786087f91f723cfcdf3be578e0accc2505a1070c => d30549201ab9edd84eddb3424dd4f4d67c923508
-Associating user x-0 in users.jenkins.io with email vivek.thangathurai@appdirect.com to git GitProvider user with login -0 as emails match
-Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
-WARNING: Failed to enrich commit cc860cf1f1389adc16a981501cb08536096c0fda with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Generating change log from git ref d30549201ab9edd84eddb3424dd4f4d67c923508 => 682997d04f02b6a4e81f0ebbd33e70c6210532aa
+Associating user ***************** in users.jenkins.io with email vivek.thangathurai@appdirect.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user ***************** in users.jenkins.io
+WARNING: Failed to enrich commit 5f1f69c7fc4f608c12d1b12e1ad4c5286b36a7f5 with issues: User.jenkins.io "*****************" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user ***************** in users.jenkins.io with email vivek.thangathurai@appdirect.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user ***************** in users.jenkins.io
+WARNING: Failed to enrich commit 5f1f69c7fc4f608c12d1b12e1ad4c5286b36a7f5 with issues: User.jenkins.io "*****************" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
 Finding issues in commit messages using git format
-WARNING: No release found for *****************/go-jenkins-x and tag v0.0.1 so creating a new release
-Updated the release information at https://github.com/*****************/go-jenkins-x/releases/tag/v0.0.1
+WARNING: No release found for *****************/go-jenkins-x and tag v0.0.2 so creating a new release
+Updated the release information at https://github.com/*****************/go-jenkins-x/releases/tag/v0.0.2
 generated: /workspace/source/charts/go-jenkins-x/templates/release.yaml
-Created Release go-jenkins-x-0-0-1 resource in namespace **
-Updating PipelineActivity *****************-go-jenkins-x-master-1 with version 0.0.1
-Updated PipelineActivities *****************-go-jenkins-x-master-1 with release notes URL: https://github.com/*****************/go-jenkins-x/releases/tag/v0.0.1
+Created Release go-jenkins-x-0-0-2 resource in namespace **
+Updating PipelineActivity *****************-go-jenkins-x-master-1 with version 0.0.2
+Updated PipelineActivities *****************-go-jenkins-x-master-1 with release notes URL: https://github.com/*****************/go-jenkins-x/releases/tag/v0.0.2
 
-Showing logs for build [32mvivekthangathurai-go-jenkins-x-tj5xv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+Showing logs for build [32mvivekthangathurai-go-jenkins-x-r6ll7-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
 Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
 Successfully added Helm repository storage.googleapis.com.
 Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
 Successfully added Helm repository jenkins-x-chartmuseum.
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
-Uploading chart file go-jenkins-x-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Uploading chart file go-jenkins-x-0.0.2.tgz to http://jenkins-x-chartmuseum:8080/api/charts
 Received 201 response: {"saved":true}
 
-Showing logs for build [32mvivekthangathurai-go-jenkins-x-tj5xv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+Showing logs for build [32mvivekthangathurai-go-jenkins-x-r6ll7-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
 WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
-Promoting app go-jenkins-x version 0.0.1 to namespace **-staging
-WARNING: 
-Created Pull Request: https://github.com/*****************/environment-jenkinsx-cluster-staging/pull/1
-Added label updatebot to Pull Request https://github.com/*****************/environment-jenkinsx-cluster-staging/pull/1
-got git provider status pending from PR https://github.com/*****************/environment-jenkinsx-cluster-staging/pull/1
-got git provider status pending from PR https://github.com/*****************/environment-jenkinsx-cluster-staging/pull/1
-got git provider status pending from PR https://github.com/*****************/environment-jenkinsx-cluster-staging/pull/1
-got git provider status pending from PR https://github.com/*****************/environment-jenkinsx-cluster-staging/pull/1
-got git provider status pending from PR https://github.com/*****************/environment-jenkinsx-cluster-staging/pull/1
-Pull Request https://github.com/*****************/environment-jenkinsx-cluster-staging/pull/1 is merged at sha f23eb8a5b64f483c0a9a28f8c9548c8fe6bc042f
+Promoting app go-jenkins-x version 0.0.2 to namespace **-staging
+Created Pull Request: https://github.com/*****************/environment-jenkinsx-staging/pull/1
+Added label updatebot to Pull Request https://github.com/*****************/environment-jenkinsx-staging/pull/1
+got git provider status pending from PR https://github.com/*****************/environment-jenkinsx-staging/pull/1
+got git provider status pending from PR https://github.com/*****************/environment-jenkinsx-staging/pull/1
+got git provider status pending from PR https://github.com/*****************/environment-jenkinsx-staging/pull/1
+Pull Request https://github.com/*****************/environment-jenkinsx-staging/pull/1 is merged at sha 97f72ed0f8f5de88a96ed10a9dc789af61b0416d
 Pull Request merged but we are not waiting for the update pipeline to complete!
 WARNING: Could not find the service URL in namespace **-staging for names go-jenkins-x, **-go-jenkins-x, **-staging-go-jenkins-x
