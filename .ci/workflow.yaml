@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: ci-k8s-webhook-handler-
+spec:
+  entrypoint: build
+  templates:
+    - name: build
+      inputs:
+        artifacts:
+          - name: source
+            path: /src
+            git:
+              repo: "{{workflow.annotations.k8s-webhook-handler.io/repo_ssh}}"
+              revision: "{{workflow.annotations.k8s-webhook-handler.io/revision}}"
+      container:
+        image: golang:1.14
+        command: ["go", "install", "./..." ]
+        workingDir: /src
+      outputs:
+        artifacts:
+          - name: binaries
+            path: /go/bin
